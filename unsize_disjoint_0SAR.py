@@ -242,7 +242,7 @@ for i in range (test_num):
         accuracy_np = sess.run(accuracy, feed_dict={x: Prob_MRF_val, pixel_coordinate:Prob_MRF_val_coordinate, \
                                                 y: Prob_MRF_val_labels, keep_prob: 1.})
         duration = time.time()-start_time 
-        duration = duration*60
+        duration = duration
         print ("Testing Accuarcy:"+"{:.6f}".format(accuracy_np)+ ", Test_time=" + "{:.6f}".format(duration))
 
         Testing_Accuarcy[0,0] = accuracy_test.astype(np.float32)
